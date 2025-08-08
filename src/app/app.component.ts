@@ -9,11 +9,11 @@ import { TasksComponent } from "./tasks/tasks.component";
   standalone: true,
   imports: [HeaderComponent, UserComponent, TasksComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedUserId = 'u1';
+  selectedUserId?: string;
 
   get selectedUser() {
     return this.users.find(user => user.id === this.selectedUserId);
